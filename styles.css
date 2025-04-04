@@ -1,0 +1,140 @@
+
+/* Main styles for EcoTrack Waste Management System */
+
+/* Custom tab styling */
+.tab-item {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+    border-radius: 0.375rem;
+}
+
+.tab-item:hover {
+    background-color: #f3f4f6;
+}
+
+.tab-item.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Tab container styles */
+.tab-container .tab-header {
+    display: flex;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-container .tab-btn {
+    flex: 1;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    color: #6b7280;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+.tab-container .tab-btn.active {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
+}
+
+.tab-container .tab-content {
+    display: none;
+    padding-top: 1rem;
+}
+
+.tab-container .tab-content.active {
+    display: block;
+}
+
+/* Toast notifications */
+#toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    animation: fade-in 0.3s, fade-out 0.5s 2.5s forwards;
+    max-width: 24rem;
+}
+
+.toast-success {
+    background-color: #ecfdf5;
+    border-left: 4px solid #10b981;
+}
+
+.toast-error {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+}
+
+.toast-info {
+    background-color: #eff6ff;
+    border-left: 4px solid #3b82f6;
+}
+
+.toast-warning {
+    background-color: #fffbeb;
+    border-left: 4px solid #f59e0b;
+}
+
+.toast-icon {
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-title {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #111827;
+}
+
+.toast-message {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.toast-close {
+    margin-left: 0.75rem;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0;
+        transform: translateY(-0.5rem);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-out {
+    from { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to { 
+        opacity: 0;
+        transform: translateY(-0.5rem);
+    }
+}
